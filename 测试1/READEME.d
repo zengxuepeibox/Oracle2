@@ -25,7 +25,7 @@ WHERE d.department_id = e.department_id
 GROUP BY department_name
 HAVING d.department_name in ('IT'，'Sales');
 运行结果： 
-![image](https://github.com/zengxuepeibox/Oracle/blob/master/SY2.png)
+![image](https://github.com/zengxuepeibox/Oracle/blob/master/test1/SY2.png)
 比较：我认为下面那条查询语句是最优的，两条语句都是查询部门总人数以及平均工资的，第一条语句直接在匹配外键约束时，进行查询内容过滤；第二条在匹配出外键之后相当于新生成一张表，再从表中查询过滤
 过滤，在结果返回之后起作用。
 
