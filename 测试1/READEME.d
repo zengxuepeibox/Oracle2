@@ -14,7 +14,7 @@ where d.department_id = e.department_id
 and d.department_name in ('IT'，'Sales')
 GROUP BY department_name;
 运行结果： 
-![image](https://user-images.githubusercontent.com/44183242/47154560-3adaec80-d315-11e8-8d92-6c2face5882d.png)
+![image](https://github.com/zengxuepeibox/Oracle/blob/master/SY1.png)
 
 
 查询2：
@@ -25,7 +25,7 @@ WHERE d.department_id = e.department_id
 GROUP BY department_name
 HAVING d.department_name in ('IT'，'Sales');
 运行结果： 
-![image](https://user-images.githubusercontent.com/44183242/47154662-81c8e200-d315-11e8-8ba3-fb7a8799f4a0.png)
+![image](https://github.com/zengxuepeibox/Oracle/blob/master/SY2.png)
 比较：我认为下面那条查询语句是最优的，两条语句都是查询部门总人数以及平均工资的，第一条语句直接在匹配外键约束时，进行查询内容过滤；第二条在匹配出外键之后相当于新生成一张表，再从表中查询过滤
 过滤，在结果返回之后起作用。
 
@@ -37,4 +37,4 @@ from hr.jobs j
 where j.min_salary>2500 
 order by j.job_id) t 
 where rownum>0 and rownum<=8
-![Uploading image.png…]()
+![image](https://github.com/zengxuepeibox/Oracle/blob/master/SY3.png)
