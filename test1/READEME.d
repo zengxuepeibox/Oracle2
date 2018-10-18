@@ -14,7 +14,7 @@ where d.department_id = e.department_id
 and d.department_name in ('IT'，'Sales')
 GROUP BY department_name;
 运行结果： 
-![image](https://github.com/zengxuepeibox/Oracle/blob/master/SY1.png)
+![image](https://github.com/zengxuepeibox/Oracle/blob/master/test1/SY1.png)
 
 
 查询2：
@@ -37,4 +37,4 @@ from hr.jobs j
 where j.min_salary>2500 
 order by j.job_id) t 
 where rownum>0 and rownum<=8
-![image](https://github.com/zengxuepeibox/Oracle/blob/master/SY3.png)
+![image](https://github.com/zengxuepeibox/Oracle/blob/master/test1/SY3.png)
